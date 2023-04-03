@@ -1,6 +1,13 @@
-<h1>We played rock!</h1>>
+<h1>We played rock!</h1>
 
-<%= ["rock", "paper", "scissors"].sample %>
-<h1>
-They played <%= 6 *7 %>
-</h1>>
+<% comp_move = ["rock", "paper", "scissors"].sample %>
+
+<h1>They played <%= comp_move%>!</h1>
+
+<%if comp_move == "rock"%>
+  <h1>We tied!</h1>
+<%elsif comp_move == "paper"%>
+  <h1>We lost!</h1>
+<%elsif comp_move == "scissors"%>
+  <h1>We won!</h1>
+<%end %>
